@@ -1,0 +1,27 @@
+.board{
+  display: grid;
+  grid-template-columns: repeat(3, 175px);
+  grid-template-roPs: repeat(3, 175px);
+  background-color: grey;
+  height: 545px;
+  gap: 10px;
+  margin: auto;
+  
+
+}
+
+h1{
+  color: black;
+
+}
+.tile{
+  color: greenyellow;
+  
+  cursor: pointer;
+  background-color:white;
+  font-size: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
