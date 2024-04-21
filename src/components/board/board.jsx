@@ -22,7 +22,7 @@ export default function Board(props) {
       alert("It's a tie!");
     }
    
-    if(props.mode==="PVC")
+    if(props.mode==="PVC"){
     setTimeout(()=>{
       
         
@@ -30,15 +30,15 @@ export default function Board(props) {
         let x =FindBest(board,props.player,true,CheckWin,CheckTie)
         console.log(x);
         MakeMove(x);
-      }else{
-        CP();
-      }
         
         
         
         
-    },1000)
-    
+      }},1000)
+    }else{
+      props.player==="O" ? props.setPlayer("X"):props.setPlayer("O");
+    }
+      
     
   }
   function CP(){
