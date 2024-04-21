@@ -39,7 +39,7 @@ return bestScore;
 export function FindBest(board, player, max, checkWin, CheckTie) {
   let bestMove = 0;
   let bestScore = max ? -Infinity : Infinity;
-  
+  if(board[4]==="")return 4;
 
   for (let i = 0; i < 9; i++) {
     if (board[i] === "") {
