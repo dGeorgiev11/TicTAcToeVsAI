@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "https://dgeorgiev11.github.io/TicTAcToeVsAI",
+  "homepage": "http://dgeorgiev11.github.io/TicTAcToeVsAI",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.4",
