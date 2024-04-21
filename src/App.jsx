@@ -11,9 +11,12 @@ function App() {
   const [board,setBoard] = useState(['','','','','','','','','']);
   const [winner,setWinner] =useState(null);
   const[player,setPlayer] = useState("O");
+  const [ingame,setIngame]= useState("No")
 
   function init(){
     setBoard(['','','','','','','','',''])
+    setWinner(null)
+    setIngame("no");
     console.log(board)
   }
   useEffect(()=>{
@@ -36,13 +39,16 @@ function App() {
       reset={init}
       winner={winner}
       player={player}
-      setPlayer= {setPlayer}/>
+      setPlayer= {setPlayer}
+      ingame={ingame}/>
       <Board board={board}
       setBoard={setBoard}
       player={player}
       setPlayer={setPlayer}
       winner={winner}
-      setWinner={setWinner}/>
+      setWinner={setWinner}
+      mode={mode}
+      setIngame={setIngame}/>
       
     </div>
   );

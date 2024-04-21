@@ -5,7 +5,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 
 import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
+import Select from '@mui/material/Select';
 import  Typography  from '@mui/material/Typography';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
@@ -67,13 +67,14 @@ const Nav = (props)=>{
       exclusive
       onChange={handleShapeChange}
       aria-label="Platform"
+      disabled={props.ingame==="yes"}
     >
       <ToggleButton value="O">O</ToggleButton>
       <ToggleButton value="X">X</ToggleButton>
       
     </ToggleButtonGroup>
     <Typography variant='h2'>
-        {props.winner?`Winner is ${props.winner}`:`Next Player: ${props.player}`}
+        {props.winner!==null&&`Winner is ${props.winner}`}
       </Typography>
   </div>)
 }
